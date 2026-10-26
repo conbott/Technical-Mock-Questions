@@ -7,12 +7,12 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 This repository contains the complete end-to-end Machine Learning pipeline developed for **Technical Round 3**. The model classifies Italian wine samples into three distinct cultivars based on 13 chemical constituents loaded directly from `sklearn.datasets`. All 7 required pipeline stages are performed sequentially in full accordance with examination instructions without skipping.
 
 ---
 
-## 🏗️ Project Architecture & Workflow Stages
+## Project Architecture & Workflow Stages
 
 ```mermaid
 flowchart LR
@@ -30,14 +30,14 @@ flowchart LR
 - **Attributes Captured:**
   - `alcohol`, `malic_acid`, `ash`, `alcalinity_of_ash`, `magnesium`, `total_phenols`, `flavanoids`, `nonflavanoid_phenols`, `proanthocyanins`, `color_intensity`, `hue`, `od280/od315_of_diluted_wines`, `proline`.
   - Target: 3 distinct cultivars (`class_0` [59 samples], `class_1` [71 samples], `class_2` [48 samples]).
-  - Local persistence: [`dataset.csv`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock3/dataset.csv).
+  - Local persistence: [`dataset.csv`](dataset.csv).
 
 ### Stage 2: Data Preprocessing
 - **Missing Value Handling:** Verified 0 null values in the official scikit-learn dataset.
 - **Feature Standardization:** Scaled continuous chemical features using `StandardScaler` inside scikit-learn `Pipeline` to prevent data leakage between training and validation splits.
 
 ### Stage 3: Exploratory Data Analysis (EDA) & Visualisations
-Visualizations generated in [`visualizations/`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock3/visualizations/):
+Visualizations generated in [`visualizations/`](visualizations/):
 1. `target_distribution.png`: Cultivar class frequencies across classes 0, 1, and 2.
 2. `alcohol_vs_flavanoids.png`: Scatter plot showing strong clustering separation between cultivars based on alcohol and flavanoids.
 3. `correlation_heatmap.png`: Pearson correlation matrix of the 13 chemical features.
@@ -69,11 +69,11 @@ Four distinct tree and ensemble classifiers evaluated via 5-fold cross-validatio
 - **Key Chemical Insights:**
   - `flavanoids`, `proline`, and `color_intensity` are the top 3 most discriminating chemical markers.
   - Both Random Forest and Extra Trees achieved perfect separation on the held-out test cohort ($100\%$ accuracy).
-  - Confusion matrix heatmap saved in [`visualizations/confusion_matrix.png`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock3/visualizations/confusion_matrix.png).
+  - Confusion matrix heatmap saved in [`visualizations/confusion_matrix.png`](visualizations/confusion_matrix.png).
 
 ---
 
-## 🚀 Execution Instructions
+## Execution Instructions
 ```bash
 # Run practical pipeline
 python ml_practical_project.py

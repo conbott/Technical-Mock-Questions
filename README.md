@@ -4,7 +4,7 @@ Comprehensive solutions, runnable Python scripts, end-to-end Machine Learning pi
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 .
@@ -43,7 +43,7 @@ Comprehensive solutions, runnable Python scripts, end-to-end Machine Learning pi
 
 ---
 
-## 🚀 Overview of Technical Rounds
+## Overview of Technical Rounds
 
 ### 1. [Mock 1 — Binary Classification](Mock1/)
 * **Focus Areas:** Python Fundamentals (Fibonacci, String Manipulation, Loops without `if`, Primality, Longest Word), Python Theory, Core Machine Learning Principles.
@@ -77,7 +77,7 @@ Comprehensive solutions, runnable Python scripts, end-to-end Machine Learning pi
 
 ---
 
-## 🛠️ Environment Setup & Installation
+## Environment Setup & Installation
 
 Clone the repository and install the standard scientific Python dependencies:
 

@@ -7,12 +7,12 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 This repository contains the complete end-to-end Machine Learning pipeline developed for **Technical Round 2**. The system predicts the continuous median house value across California block groups based on geographic, demographic, and structural attributes loaded directly from `sklearn.datasets`. All 7 evaluation stages have been strictly performed in sequential order without omission.
 
 ---
 
-## 🏗️ Project Architecture & Workflow Stages
+## Project Architecture & Workflow Stages
 
 ```mermaid
 flowchart LR
@@ -36,14 +36,14 @@ flowchart LR
   - `AveOccup`: Average number of household members.
   - `Latitude` & `Longitude`: Geographic coordinate centroid.
   - `MedHouseVal` (Target): Continuous median house value in units of $\$100,000$.
-  - Local persistence: [`dataset.csv`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock2/dataset.csv).
+  - Local persistence: [`dataset.csv`](dataset.csv).
 
 ### Stage 2: Data Preprocessing
 - **Missing Value Handling:** Verified 0 null values in the official scikit-learn dataset.
 - **Feature Standardization:** Scaled continuous predictors using `StandardScaler` inside scikit-learn `Pipeline` to prevent data leakage between training and validation splits.
 
 ### Stage 3: Exploratory Data Analysis (EDA) & Visualisations
-Visualizations generated in [`visualizations/`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock2/visualizations/):
+Visualizations generated in [`visualizations/`](visualizations/):
 1. `price_distribution.png`: Histogram and KDE curve of median house values.
 2. `income_vs_price.png`: Scatter plot illustrating the strong linear association between median income and property values.
 3. `correlation_heatmap.png`: Pearson correlation matrix of all census features.
@@ -79,7 +79,7 @@ Four distinct linear and regularized regression architectures evaluated via 5-fo
 
 ---
 
-## 🚀 Execution Instructions
+## Execution Instructions
 ```bash
 # Run practical pipeline
 python ml_practical_project.py

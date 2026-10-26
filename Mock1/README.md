@@ -7,12 +7,12 @@
 
 ---
 
-## 📌 Executive Summary
+## Executive Summary
 This repository contains the complete end-to-end Machine Learning pipeline developed for **Technical Round 1**. The goal is to accurately classify cell nuclei biopsies as either **Malignant** ($0$) or **Benign** ($1$) using real clinical diagnostic measurements loaded directly from `sklearn.datasets`. All 7 required assessment stages have been executed strictly in chronological order without omission.
 
 ---
 
-## 🏗️ Project Architecture & Workflow Stages
+## Project Architecture & Workflow Stages
 
 ```mermaid
 flowchart LR
@@ -30,14 +30,14 @@ flowchart LR
 - **Features Captured:**
   - Mean, Standard Error, and "Worst" (mean of 3 largest values) for 10 attributes: `radius`, `texture`, `perimeter`, `area`, `smoothness`, `compactness`, `concavity`, `concave points`, `symmetry`, and `fractal dimension`.
   - Target: Binary diagnosis (`0 = Malignant` [212 cases], `1 = Benign` [357 cases]).
-  - Local persistence: [`dataset.csv`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock1/dataset.csv).
+  - Local persistence: [`dataset.csv`](dataset.csv).
 
 ### Stage 2: Data Preprocessing
 - **Missing Value Handling:** Verified 0 missing entries in the clinical benchmark dataset.
 - **Leak-Free Transformation Pipeline:** Applied `StandardScaler` inside scikit-learn `Pipeline` to ensure all 30 features have zero mean and unit variance without data leakage across folds.
 
 ### Stage 3: Exploratory Data Analysis & Visualisations
-Visualizations generated in [`visualizations/`](file:///c:/Users/con1k/Documents/datascience_course/Technical%20Round%20Mock%20Questions/Mock1/visualizations/):
+Visualizations generated in [`visualizations/`](visualizations/):
 1. `target_distribution.png`: Class balance between Malignant and Benign diagnoses.
 2. `radius_vs_texture.png`: Scatter plot mapping cell nucleus radius against texture showing distinct cluster boundaries.
 3. `correlation_heatmap.png`: Pearson correlation matrix among nuclear mean attributes.
@@ -70,7 +70,7 @@ Three distinct model architectures evaluated via 5-fold cross-validation:
 
 ---
 
-## 🚀 How to Run the Project
+## Execution Instructions
 ```bash
 # Run practical pipeline
 python ml_practical_project.py
